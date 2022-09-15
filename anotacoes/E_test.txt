@@ -1,0 +1,4 @@
+1. O jest por padrão procura por arquivos que contenham .spec.
+
+2. Extensão para rodar apenas um test por vez.
+test runner

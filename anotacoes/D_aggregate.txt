@@ -1,0 +1,12 @@
+1. Um agregado(aggregate) é um conjunto de Entidades e objetos associados que 
+tratamos como uma unidade para propósito de mudança de dados. São basicamente 
+blocos de classes que precisam estar juntos.
+
+2. Classes fortemente dependentes fazem mesmo do mesmo Agregado, ou mesmo bloco.
+
+3. Quando vamos relacionar classes fortemente dependentes(que estão no mesmo 
+Agregado), nós fazemos a relação entre as classes através da Entidade.
+E quando vamos relacionar classes que não são fortemente dependentes, fazemos essa
+relação através do ID(identificador).
+
+4. O nome do Aggregate vai ser o nome da classe por onde o Aggregate começa.

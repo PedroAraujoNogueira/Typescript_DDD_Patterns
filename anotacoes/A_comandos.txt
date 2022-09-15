@@ -1,0 +1,38 @@
+1. Instalar o typescript
+npm i typescript --save-dev
+
+2. Iniciar um projeto typescript.
+npx tsc --init 
+
+3. Descomentar
+"incremental": true -> Compila somente o que foi mudado.
+"outDir": "./dist" -> O código compilado vai ser gerado em uma pasta dist.
+
+4. Vai compilar o que está na pasta src.
+"include": [
+    "src/**/*.ts"
+]
+
+5. npm i -D jest @types/jest ts-node --save-dev
+
+6. SWC é um compilador feito em Rust que consegue transpilar mais rapidamente 
+todo o código para javascript, fazendo o teste rodar mais rapidamente.
+npm i -D @swc/jest @swc/cli @swc/core
+
+7. Inicialização do Jest:
+npx jest --init
+Perguntas:
+Would you like to use Jest when running "test" script in "package.json"? … yes
+Would you like to use Typescript for the configuration file? … yes
+Choose the test environment that will be used for testing › node
+Do you want Jest to add coverage reports? … no
+Which provider should be used to instrument code for coverage? › v8
+Automatically clear mock calls, instances, contexts and results before every test? … yes
+
+8. Adicionar configuração no arquivo jest.config.ts 
+Essa configuração pega todos os arquivos ts, js, tsx ou jsx e uso o swc/jest para rodar 
+os testes.
+transform: {
+    "^.+\.(t|j)sx?$": ["@swc/jest"],
+},
+

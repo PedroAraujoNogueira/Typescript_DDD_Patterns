@@ -1,0 +1,14 @@
+1. Uma Entidade é algo único, ou seja, tem que ter um identificador.
+
+2. Os atributos de uma Entidade podem ir mudando com o tempo.
+
+3. Uma Entidade possui comportamentos.
+
+4. Uma entidade possui regras de negócio.
+
+5. Uma Entidade SEMPRE vai ter que se auto validar.
+
+6. ENTIDADE vs ORM
+A Entidade é focada em negócio já o ORM é focado em persistência dos dados, ou seja,
+a Entidade é focado no domínio(Domain) da aplicação, já o ORM é focado no armazenamento 
+de dados, que faz parte da infraestrutura da aplicação.

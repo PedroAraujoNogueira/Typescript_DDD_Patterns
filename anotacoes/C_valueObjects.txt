@@ -1,0 +1,11 @@
+1. Quando nos preocupamos apenas com os atributos de um elemento de um model,
+classificamos isso como um Value Object. Ou seja, não estou preocupado com o 
+comportamento mas somente com os atributos.
+
+2. Um Value Object deve ser tratado como imutável. Ou seja, ele não muda, 
+se quisermos mudar devemos substituir por outro.
+
+3. Um Value Object tem que estar SEMPRE se auto validando.
+
+4. Um Value Object não tem ID(identificador), pois ele não é único,
+é só um conjunto de propriedades.
