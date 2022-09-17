@@ -9,6 +9,7 @@
     "typescript": "^4.8.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "npm run typescriptconvert -- --noEmit && jest",
+    "typescriptconvert": "tsc"
   }
 }
