@@ -36,3 +36,31 @@ transform: {
     "^.+\.(t|j)sx?$": ["@swc/jest"],
 },
 
+9. Como o SWC não faz checagem da sintaxe do Typescript, precisamos adicionar
+essa verificação para que erros de sintaxe não passem pelos nossos testes. Para isso
+vamos usar o TSC que está dentro de node_modules/.bin/tsc com o seguinte comando:
+node_modules/.bin/tsc --noEmit
+OBS1: com a flag --noEmit o tsc vai fazer a checagem dos tipos e sintaxe do Typescript porém
+não vai compilar nem gerar arquivos convertidos para javascript.
+OBS2: Por padrão o Node não consegue entender o "import" e outras coisas usadas 
+pelo typescript então precisamos converter o código para Javascript com o 
+tsc(typescript conversor).
+Então para termos uma segurança de que nossos testes estão realmente passando sem 
+falhas, vamos adicionar no script de testes o comando: node_modules/.bin/tsc --noEmit.
+Logo o resultado final do script de teste no package.json vai ser:
+
+"node_modules/.bin/tsc --noEmit && jest"
+
+10. Para deixarmos mais bonito o script podemos criar um novo script que vai chamar 
+o modulo tsc, vamos chamá-lo de typescriptconvert:
+"typescriptconvert": "tsc"
+e mudamos o script de "node_modules/.bin/tsc --noEmit && jest" para:
+"npm run typescriptconvert -- --noEmit && jest"
+
+11. Como também estamos usando o plugin "test runner" no VSCode, que faz com que possamos 
+rodar cada teste individualmente, também precisamos fazer a checagem da sintaxe do typescript
+quando rodarmos o teste usando esse plugin. Para isso vamos em:
+1. Ir em file -> preferences -> settings
+2. Clicar em workspace. Para que essa alteração seja refletida apenas nesse projeto e não para
+o usuário todo.
+3. Digitar "jest", procurar por "Jest Command" e colocar "npm test" para o "Jest Command".  
