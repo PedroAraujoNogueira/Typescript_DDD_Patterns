@@ -12,3 +12,9 @@
 A Entidade é focada em negócio já o ORM é focado em persistência dos dados, ou seja,
 a Entidade é focado no domínio(Domain) da aplicação, já o ORM é focado no armazenamento 
 de dados, que faz parte da infraestrutura da aplicação.
+
+Complexidade de negócio
+-> domain -> entity -> arquivo.ts (regra de negócio) 
+
+Complexidade acidental
+-> infra -> entity/model -> arquivo.ts (get, set)

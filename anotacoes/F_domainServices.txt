@@ -1,0 +1,25 @@
+1. Definição de acordo com Vernon, Vaughn:
+Um Domain Service é uma operação sem estado(stateless) que cumpre uma tarefa
+específica do domínio. Muitas vezes, a melhor indicação de que você deve 
+criar um Domain Service é quando a operação que você precisa executar parece 
+não se encaixar como um método em um agregado, Entity ou Value Object.
+
+2. Muitas vezes vamos perceber que a operação(método) que queremos fazer não
+faz sentido ficar dentro de um agregado ou, as vezes, até faz sentido mas 
+o método precisa de um outro agregado para conseguir realizar sua função.
+
+3. Caracteríticas de métodos que possivelmente serão Domain Services:
+3.1. Tem uma ação que vai afetar várias entidades.
+3.2. Realiza uma operação em lote. EX: atualiza o preço de todos os produtos.
+3.3 Calcular algo onde eu preciso de mais de uma entidade para obter as 
+informações. EX: Calcular uma média de todos os pedidos e para saber essas
+informações eu preciso acessar mais de uma entidade. 
+
+4. Cuidados no Domain Service:
+4.1. Quando houver muitos Domain Services em seu projeto, TALVEZ, isso pode
+indicar que seus agregados estão anêmicos.
+
+5. Caracteríticas de um Domain Service.
+5.1. Domain Services são Stateless.
+5.2 Um Domain Service é um método que roda na camada de domínio, ou seja,
+nas regras de negócio.
