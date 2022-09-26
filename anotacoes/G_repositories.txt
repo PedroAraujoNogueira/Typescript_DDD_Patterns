@@ -1,0 +1,12 @@
+Definições:
+
+1. Um repositório se refere a um local de armazenamento, geralmente considerado
+um local de segurança ou preservação dos itens nele armazenados. Quando você armazena 
+algo em um repositório e depois retorna para recuperá-lo você espera que ele esteja 
+no mesmo estado que estava quando você o colocou lá.
+Vernon, Vaughn.
+
+2. Esses objetos semelhantes a coleções são sobre persistência. Todo tipo Agregado
+persistênte terá um Repositório. De um modo geral, existe uma relação um para um 
+entre um tipo Agregado e um Repositório. 
+Vernon, Vaughn.
