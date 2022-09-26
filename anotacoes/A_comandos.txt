@@ -64,3 +64,17 @@ quando rodarmos o teste usando esse plugin. Para isso vamos em:
 2. Clicar em workspace. Para que essa alteração seja refletida apenas nesse projeto e não para
 o usuário todo.
 3. Digitar "jest", procurar por "Jest Command" e colocar "npm test" para o "Jest Command".  
+
+12. Para instalar o sequelize:
+npm install sequelize reflect-metadata sequelize-typescript
+
+13. Instalar o sqlite:
+npm install sqlite3
+
+14. Para o Typescript não reclamar do uso dos Decorators dizendo que ainda é algo
+experimental, tempos que descomentar no tsconfing.json as seguintes propriedades:
+"experimentalDecorators": true,    
+"emitDecoratorMetadata": true,
+"strictNullChecks": false, // Essa por padrão vem true, então devemos descomentar e 
+trocar para false.
+
