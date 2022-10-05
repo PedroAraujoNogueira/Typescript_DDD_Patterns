@@ -77,4 +77,5 @@ experimental, tempos que descomentar no tsconfing.json as seguintes propriedades
 "emitDecoratorMetadata": true,
 "strictNullChecks": false, // Essa por padrão vem true, então devemos descomentar e 
 trocar para false.
+Para o teste funcionar com decorator precisamos configurar também o arquivo .swcrc.
 
