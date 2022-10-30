@@ -67,7 +67,7 @@ describe("Customer repository test", () => {
             items: [{
                 id: orderItem.id,
                 name: orderItem.name,
-                price: orderItem.unitPrice(),
+                price: orderItem.price,
                 quantity: orderItem.quantity,
                 product_id: "123",
                 order_id: "123",
@@ -109,7 +109,7 @@ describe("Customer repository test", () => {
             items: [{
                 id: orderItem1.id,
                 name: orderItem1.name,
-                price: orderItem1.unitPrice(),
+                price: orderItem1.price,
                 quantity: orderItem1.quantity,
                 product_id: "1234",
                 order_id: "123456",
@@ -132,7 +132,7 @@ describe("Customer repository test", () => {
             items:[{
                 id: orderItem1.id,
                 name: orderItem1.name,
-                price: orderItem1.unitPrice(),
+                price: orderItem1.price,
                 quantity: orderItem1.quantity,
                 product_id: "1234",
                 order_id: "123456",
@@ -175,7 +175,7 @@ describe("Customer repository test", () => {
             items: [{
                 id: orderItem1.id,
                 name: orderItem1.name,
-                price: orderItem1.unitPrice(),
+                price: orderItem1.price,
                 quantity: orderItem1.quantity,
                 product_id: "1234",
                 order_id: "123456",
@@ -208,7 +208,7 @@ describe("Customer repository test", () => {
             items:[{
                 id: orderItem1.id,
                 name: orderItem1.name,
-                price: orderItem1.unitPrice(),
+                price: orderItem1.price,
                 quantity: orderItem1.quantity,
                 product_id: "1234",
                 order_id: "123456",
@@ -216,7 +216,7 @@ describe("Customer repository test", () => {
             {
                 id: orderItem2.id,
                 name: orderItem2.name,
-                price: orderItem2.unitPrice(),
+                price: orderItem2.price,
                 quantity: orderItem2.quantity,
                 product_id: "12342",
                 order_id: "123456",
