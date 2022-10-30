@@ -1,0 +1,42 @@
+DEFINIÇÃO
+
+1. Use um evento de domínio para capturar uma ocorrência de algo que aconteceu 
+no domínio. Vernon, Vaughn.
+
+2. A essência de um evento de domínio é que você o usa para capturar coisas que 
+podem desencadear uma mudança no estado do aplicativo que você está desenvolvendo.
+Esses objetos de evento são processados para causar alterações no sistema e 
+armazenados para fornecer um AuditLog(ou seja, posso guardar um histórico de todos os 
+eventos que estão acontecendo no meu sistema). Fowler, Martin.
+
+3. Todo evento deve ser representado em uma ação realizada no passado:
+Ex:
+-> UserCreated (ou seja, o usuário já foi criado)
+-> EmailSent (ou seja, o email já foi enviado)
+
+DOMAIN EVENTS - QUANDO UTILIZAR
+
+1. Normalmente um Domain Event deve ser utilizado quando queremos notificar 
+outros Bounded Contexts de uma mudança de estado.
+
+DOMAIN EVENTS - COMPONENTES
+
+1. Event -> Normalmente terá uma data de acontecimento e o que aconteceu naquela data.
+2. Handler 
+-> Executa um processamento quando um evento é chamado. Ou seja, o Handler 
+é a ação que é executada depois que o evento acontece. 
+-> O Handler é uma implementação concreta do que é feito quando um evento é disparado. 
+-> Podemos também ter diversos handlers para um evento.
+3. Event Dispatcher: Responsável por armazenar e executar os handlers de um evento quando
+o evento for disparado.
+
+DOMAIN EVENTS - DINÂMICA
+
+Passo 1: Criar um Event Dispatcher.
+Passo 2: Criar um Event.
+Passo 3: Criar um Handler para o Evento.
+Passo 4: Registrar o Evento, juntamente com o Handler no Event Dispatcher.
+
+Agora para dispara um evento, basta executar um método do Event 
+Dispatcher. Nesse momento todos os Handlers registrados no evento 
+serão executados.

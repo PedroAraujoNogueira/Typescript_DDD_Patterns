@@ -13,7 +13,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
             items: entity.items.map((item) => ({
                 id: item.id,
                 name: item.name,
-                price: item.unitPrice(),
+                price: item.price,
                 product_id: item.productId,
                 quantity: item.quantity,
             }))
@@ -34,7 +34,7 @@ export default class OrderRepository implements OrderRepositoryInterface {
                 const items = entity.items.map((item) => ({
                     id: item.id,
                     name: item.name,
-                    price: item.unitPrice(),
+                    price: item.price,
                     product_id: item.productId,
                     quantity: item.quantity,
                     order_id: entity.id,
