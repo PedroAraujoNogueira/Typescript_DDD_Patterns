@@ -1,0 +1,11 @@
+Módulos
+
+1. Respeitar a linguagem ambíqua, ou seja, os Módulos tem que deixar claro todos 
+os contextos da aplicação(bounded context).
+2. Baixo acoplamento, ou seja, tentar deixar um Módulo o mais independente do outro, embora
+na prática isso seja muito difícil em alguns casos.
+3. Um ou mais agregados devem estar juntos somente se fazem sentido.
+4. Organizado pelo domínio/subdomínio e não pelo tipo de objeto.
+5. Devem Respeitar a mesma divisão quando estão em camadas diferentes, ou seja, a divisão
+que fizermos na camada de dominio deve fazer sentido nas camadas de aplicação, 
+infraestrutura e etc.
