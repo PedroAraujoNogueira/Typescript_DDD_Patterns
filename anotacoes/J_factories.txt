@@ -1,0 +1,3 @@
+Um dos grandes benefícios da factory é podermos tirar a complexidade do usuário 
+na hora de criarmos um objeto podendo criar aggregados complexos de forma fácil, 
+abstraindo toda a complexidade do aggregado para dentro da factory. 
