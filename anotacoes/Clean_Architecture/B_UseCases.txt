@@ -1,0 +1,17 @@
+USE CASES
+
+1. Casos de uso representam uma intenção.
+2. Trabalhar com Use Case significa ter clareza de cada comportamento do software.
+3. Detalhes não devem impactar nas regras de negócio.
+4. Frameworks, banco de dados e APIs não devem impactar as regras de negócio.
+
+USE CASES e SRP(Single Responsability Principle)
+
+1. Temos a tendência de reaproveitar Use Cases por serem muito parecidos.
+Exemplo: Alterar vs Inserir. Ambos consultam se o registro existe e persistem
+dados, MAS são use cases diferentes, pois Alterar e Inserir tem INTENÇÕES 
+diferentes logo são Use Cases diferentes, seguindo o SRP.
+-> Seguindo o SRP, um método deve ter apenas uma responsabilidade, logo também só
+haverá uma razão para esse método mudar. No exemplo acima, "Alterar vs Inserir", teríamos
+mais de uma responsabilidade no mesmo método ou Use Case se ambos fossem atendidos pelo no 
+mesmo método ou Use Case.  

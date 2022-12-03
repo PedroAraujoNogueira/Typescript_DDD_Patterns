@@ -1,0 +1,24 @@
+CONCEITOS CLEAN ARCHITECTURE
+
+1. Um ponto importante da Clean Architecture é que ela foca em proteger o 
+"coração" da aplicação.
+2. A Clean Architecture é uma variação ou evolução da Arquitetura Hexagonal, porém as duas
+envolvem o conceito de proteger o coração da aplicação.
+3. Baixo acomplamento entre as camadas -> Para protegermos o coração da nossa aplicação temos 
+que trabalhar com camadas. Camadas significam limites arquiteturais e a melhor forma de fazer 
+a comunicação entre um limite arquitetural e outro é através de contratos(interfaces), para que
+assim consigamos manter um baixo acomplamento entre as camadas. 
+4. Orientada a casos de uso -> É a intenção de conseguir realizar alguma ação.
+
+PONTOS IMPORTANTES SOBRE ARQUITETURA
+
+1. Formato que o software terá.
+2. Divisão de componentes.
+3. Comunicação entre componentes.
+4. Uma boa arquitetura vai facilitar o processo de desenvolvimento, deploy, operação 
+e manutenção. 
+
+O objetivo principal de uma boa arquitetura é dar suporte ao ciclo de vida do sistema.
+Uma boa arquitetura torna o sistema fácil de entender, fácil de desenvolver, fácil de manter
+e fácil de implantar. O objetivo final é minimizar o custo de vida útil do sistema e maximizar
+a produtividade do programador. 
