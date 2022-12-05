@@ -4,6 +4,9 @@ USE CASES
 2. Trabalhar com Use Case significa ter clareza de cada comportamento do software.
 3. Detalhes não devem impactar nas regras de negócio.
 4. Frameworks, banco de dados e APIs não devem impactar as regras de negócio.
+5. O Use Case é a automatização de um conjunto de regras e validações. Ou seja, o 
+Use Case representa a automatização de um fluxo(a ordem em que as regras e validações 
+acontecem). A imagem usecases.jpeg exemplifica esse processo.
 
 USE CASES e SRP(Single Responsability Principle)
 
@@ -15,3 +18,4 @@ diferentes logo são Use Cases diferentes, seguindo o SRP.
 haverá uma razão para esse método mudar. No exemplo acima, "Alterar vs Inserir", teríamos
 mais de uma responsabilidade no mesmo método ou Use Case se ambos fossem atendidos pelo no 
 mesmo método ou Use Case.  
+
