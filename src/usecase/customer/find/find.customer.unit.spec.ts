@@ -3,35 +3,26 @@ import Customer from "../../../domain/customer/entity/customer";
 import Address from "../../../domain/customer/value-object/address";
 import CustomerModel from "../../../infrastructure/customer/repository/sequelize/customer.model";
 import CustomerRepository from "../../../infrastructure/customer/repository/sequelize/customer.repository";
+import FindCustomerUseCase from "./find.customer.usecase";
 
-describe("Test find customer use case", () => {
-    let sequelize: Sequelize;
+describe("Unit Test find customer use case", () => {
 
-    beforeEach(async () => {
-        sequelize = new Sequelize({
-            dialect: "sqlite",
-            storage: ":memory:",
-            logging: false,
-            sync: { force: true },
-        });
-        
-        sequelize.addModels([CustomerModel]);
-        await sequelize.sync();
-    });
+    const customer = new Customer("123", "Pedro");
+    const address = new Address("Street 1", 1, "12345678", "City 1");
+    customer.changeAddress(address);
 
-    afterEach(async () => {
-        await sequelize.close();
-    });
+    const MockRepository = () => {
+        return { 
+           find: jest.fn().mockReturnValue(Promise.resolve(customer)),
+           findAll: jest.fn(),
+           update: jest.fn(),
+           create: jest.fn()
+        }
+    }
 
     it("should find a customer", async () => {
-        const customerRepository = new CustomerRepository();
+        const customerRepository = MockRepository();
         const usecase = new FindCustomerUseCase(customerRepository);
-
-        const customer = new Customer("123", "Pedro");
-        const address = new Address("Street 1", 1, "12345678", "City 1");
-        customer.changeAddress(address);
-
-        await customerRepository.create(customer);
 
         const input = {
             id: "123"
@@ -48,8 +39,8 @@ describe("Test find customer use case", () => {
             }
         }
 
-        const result = usecase.execute(input);
+        const result = await usecase.execute(input);
 
-        expect(result).toBe(output);
+        expect(result).toEqual(output);
     })
 })
