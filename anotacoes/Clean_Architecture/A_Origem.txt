@@ -21,4 +21,12 @@ e manutenção.
 O objetivo principal de uma boa arquitetura é dar suporte ao ciclo de vida do sistema.
 Uma boa arquitetura torna o sistema fácil de entender, fácil de desenvolver, fácil de manter
 e fácil de implantar. O objetivo final é minimizar o custo de vida útil do sistema e maximizar
-a produtividade do programador. 
+a produtividade do programador.
+
+LIMITES ARQUITETURAIS 
+
+-> Tudo que não impacta diretamente nas regras de negócio deve estar em um 
+limite arquitetural diferente da camada de regras de negócio. EX: Independente do 
+Frontend e do Banco de Dados que será usado as regras de negócio não mudarão, logo
+tanto a camada de Banco de Dados como de FrontEnd devem estar em limites arquiteturais
+diferentes da camada das regras de negócio. 
