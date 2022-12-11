@@ -29,4 +29,18 @@ LIMITES ARQUITETURAIS
 limite arquitetural diferente da camada de regras de negócio. EX: Independente do 
 Frontend e do Banco de Dados que será usado as regras de negócio não mudarão, logo
 tanto a camada de Banco de Dados como de FrontEnd devem estar em limites arquiteturais
-diferentes da camada das regras de negócio. 
+diferentes da camada das regras de negócio.
+
+DTO 
+
+1. O DTO ajuda a trafegar os dados entre os limites arquiteturais.
+2. O DTO é um objeto anêmico, sem comportamento.
+3. O DTO não possui regras de negócio.
+Resumindo: O DTO não faz nada além de trafegar os dados entre os limites arquiteturais.
+
+PRESENTERS
+
+1. Os Presenters são objetos de transformação.
+2. ￼
+
+
