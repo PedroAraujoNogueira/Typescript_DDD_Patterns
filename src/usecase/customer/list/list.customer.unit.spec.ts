@@ -24,12 +24,17 @@ const MockRepository = () => {
 describe("Unit test for listing customer use case", () => {
     it("should list a customer", async () => {
         const customerRepository = MockRepository();
-        const usecase = ListCustomerUseCase(customerRepository);
+        const usecase = new ListCustomerUseCase(customerRepository);
 
-        const output = await usecase.execute();
+        const output = await usecase.execute({});
 
         expect(output.customers.length).toBe(2);
-        expect(output.customers[0]).toEqual(customer1);
-        expect(output.customers[1]).toEqual(customer2);
+        expect(output.customers[0].id).toEqual(customer1.id);
+        expect(output.customers[0].name).toEqual(customer1.name);
+        expect(output.customers[0].address.street).toEqual(customer1.address.street);
+        expect(output.customers[1].id).toEqual(customer2.id);
+        expect(output.customers[1].name).toEqual(customer2.name);
+        expect(output.customers[1].address.street).toEqual(customer2.address.street);
+        
     })
 })
