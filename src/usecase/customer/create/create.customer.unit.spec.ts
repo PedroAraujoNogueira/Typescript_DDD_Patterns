@@ -57,8 +57,6 @@ describe("Unit Test create customer use case", () => {
         
         expect(async ()=> {
             await customerCreateUseCase.execute(input)
-        }).rejects.toThrow("Street is required");
-     
-    })
-
+        }).rejects.toThrow("Street is required");  
+    });
 });
