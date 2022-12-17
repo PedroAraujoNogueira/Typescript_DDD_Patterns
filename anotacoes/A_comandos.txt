@@ -79,3 +79,5 @@ experimental, tempos que descomentar no tsconfing.json as seguintes propriedades
 trocar para false.
 Para o teste funcionar com decorator precisamos configurar também o arquivo .swcrc.
 
+15. npm i express @types/express dotenv nodemon
+
