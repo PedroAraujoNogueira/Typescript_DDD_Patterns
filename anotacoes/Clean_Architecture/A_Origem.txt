@@ -41,6 +41,19 @@ Resumindo: O DTO não faz nada além de trafegar os dados entre os limites arqui
 PRESENTERS
 
 1. Os Presenters são objetos de transformação.
-2. ￼
+2. Os Presenters adequam o DTO de output no formato correto para entregar 
+o resultado.
+3. Lembrando: Um sistema pode ter diversos formatos de entrega. Ex: XML,
+JSON, Protobuf, GraphQL, CLI e etc.
 
+ENTITIES vs DDD
 
+1. Entities da clean Architecture são diferentes da Entities do DDD.
+Na clean Architecture as entities são uma camada enquanto no DDD as entities 
+são algo único que fazem parte de um agregado.
+2. Clean Architecture define entity como camada de regras de negócio.
+3. Como a clean Architecture não define como explicitamente como as entities
+devem ser criadas então normalmente, uma boa prática é usar os conceitos e táticas
+aprendidos no DDD para realizar a implementação dessa camada.  
+4. Clean Architecture(Entities) = DDD(Agregados + Domain Services + Event, basicamente 
+tudo que está dentro da camada Domain). 

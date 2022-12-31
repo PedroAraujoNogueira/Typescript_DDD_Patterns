@@ -47,6 +47,6 @@ describe("Unit test for customer update use case", () => {
         
         expect(async () => {
             await customerUpdateUseCase.execute(input);
-        }).rejects.toThrow("Name is required")
+        }).rejects.toThrow("customer: Name is required")
     })
 })
