@@ -1,0 +1,12 @@
+DDD é uma forma de desenvolver software com o foco no coração da aplicação(que chamamos 
+de domínio), tendo o objetivo de entender suas regras, proceessos e complexidades, 
+separando-as assim de outros pontos complexos que normalmente são adicionados durante
+o processo de desenvolvimento. 
+
+BOUNDED CONTEXTS(CONTEXTOS DELIMITADOS)
+
+Um Bounded Context é uma divisão explícita dentro de um Domínio(Domain). 
+
+CONTEXT MAPPING
+
+https://github.com/ddd-crew/context-mapping
