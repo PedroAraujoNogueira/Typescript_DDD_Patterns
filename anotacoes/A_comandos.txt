@@ -83,3 +83,5 @@ Para o teste funcionar com decorator precisamos configurar também o arquivo .sw
 
 16. npm i -D supertest @types/supertest -> Essa biblioteca vai ajudar a fazer os testes 
 e2e, pois ele vai conseguir chamar a instância do express.   
+
+17. npm i yup
