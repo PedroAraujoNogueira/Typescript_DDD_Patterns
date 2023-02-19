@@ -85,3 +85,7 @@ Para o teste funcionar com decorator precisamos configurar também o arquivo .sw
 e2e, pois ele vai conseguir chamar a instância do express.   
 
 17. npm i yup
+
+18. npm i jstoxml
+
+19. npm i -D @types/jstoxml
